@@ -1,0 +1,5 @@
+# Replace dashboard.yourdomain.example with your real domain or DuckDNS hostname.
+# Caddy will serve HTTPS and proxy to the local dashboard.
+dashboard.yourdomain.example {
+    reverse_proxy 127.0.0.1:8050
+}

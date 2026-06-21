@@ -1,0 +1,146 @@
+generated_spread_risk:
+  version: 1
+  generated_by: src.prepare_direction_dataset
+  source_config: config/direction_settings_residual_mlp.yaml
+  timeframe: M5
+  threshold_stat: p95
+  spread_column: spread_points
+  spread_unit_conversion: symbol_point_to_cfd_unit
+  symbols:
+  - GER40
+  - NAS100
+  - US500
+  - XAGUSD
+  - XAUUSD
+risk:
+  max_spread_points_by_symbol:
+    GER40: 72.0
+    NAS100: 19.0
+    US500: 6.0
+    XAGUSD: 30.0
+    XAUUSD: 18.0
+labels:
+  default_spread_points_by_symbol:
+    GER40: 15.0
+    NAS100: 15.0
+    US500: 4.0
+    XAGUSD: 17.0
+    XAUUSD: 10.0
+  default_spread_pips_by_symbol:
+    GER40: 0.15
+    NAS100: 0.15
+    US500: 0.04
+    XAGUSD: 1.7
+    XAUUSD: 1.0
+  max_spread_pips_by_symbol:
+    GER40: 0.72
+    NAS100: 0.19
+    US500: 0.06
+    XAGUSD: 3.0
+    XAUUSD: 1.8
+spread_profile:
+  GER40:
+    symbol: GER40
+    spread_column: spread_points
+    spread_unit_conversion: symbol_point_to_cfd_unit
+    percentile: 95.0
+    valid_spread_count: 194177
+    used_fallback: false
+    fallback_default_spread_points: 10.0
+    min_valid_spread_points: 0.0
+    max_valid_spread_points: null
+    min_spread_points: 9.0
+    median_spread_points: 15.0
+    mean_spread_points: 20.040458
+    p95_spread_points: 72.0
+    max_spread_points: 600.0
+    median_spread_pips: 0.15
+    p95_spread_pips: 0.72
+    selected_default_spread_points: 15.0
+    selected_default_spread_pips: 0.15
+    selected_max_spread_points: 72.0
+    selected_max_spread_pips: 0.72
+  NAS100:
+    symbol: NAS100
+    spread_column: spread_points
+    spread_unit_conversion: symbol_point_to_cfd_unit
+    percentile: 95.0
+    valid_spread_count: 211999
+    used_fallback: false
+    fallback_default_spread_points: 10.0
+    min_valid_spread_points: 0.0
+    max_valid_spread_points: null
+    min_spread_points: 5.0
+    median_spread_points: 15.0
+    mean_spread_points: 14.790098
+    p95_spread_points: 19.0
+    max_spread_points: 100.0
+    median_spread_pips: 0.15
+    p95_spread_pips: 0.19
+    selected_default_spread_points: 15.0
+    selected_default_spread_pips: 0.15
+    selected_max_spread_points: 19.0
+    selected_max_spread_pips: 0.19
+  US500:
+    symbol: US500
+    spread_column: spread_points
+    spread_unit_conversion: symbol_point_to_cfd_unit
+    percentile: 95.0
+    valid_spread_count: 212802
+    used_fallback: false
+    fallback_default_spread_points: 10.0
+    min_valid_spread_points: 0.0
+    max_valid_spread_points: null
+    min_spread_points: 4.0
+    median_spread_points: 4.0
+    mean_spread_points: 4.258611
+    p95_spread_points: 6.0
+    max_spread_points: 40.0
+    median_spread_pips: 0.04
+    p95_spread_pips: 0.06
+    selected_default_spread_points: 4.0
+    selected_default_spread_pips: 0.04
+    selected_max_spread_points: 6.0
+    selected_max_spread_pips: 0.06
+  XAGUSD:
+    symbol: XAGUSD
+    spread_column: spread_points
+    spread_unit_conversion: symbol_point_to_cfd_unit
+    percentile: 95.0
+    valid_spread_count: 212533
+    used_fallback: false
+    fallback_default_spread_points: 10.0
+    min_valid_spread_points: 0.0
+    max_valid_spread_points: null
+    min_spread_points: 3.0
+    median_spread_points: 17.0
+    mean_spread_points: 17.850226
+    p95_spread_points: 30.0
+    max_spread_points: 509.0
+    median_spread_pips: 1.7
+    p95_spread_pips: 3.0
+    selected_default_spread_points: 17.0
+    selected_default_spread_pips: 1.7
+    selected_max_spread_points: 30.0
+    selected_max_spread_pips: 3.0
+  XAUUSD:
+    symbol: XAUUSD
+    spread_column: spread_points
+    spread_unit_conversion: symbol_point_to_cfd_unit
+    percentile: 95.0
+    valid_spread_count: 212562
+    used_fallback: false
+    fallback_default_spread_points: 10.0
+    min_valid_spread_points: 0.0
+    max_valid_spread_points: null
+    min_spread_points: 1.0
+    median_spread_points: 10.0
+    mean_spread_points: 10.326201
+    p95_spread_points: 18.0
+    max_spread_points: 202.0
+    median_spread_pips: 1.0
+    p95_spread_pips: 1.8
+    selected_default_spread_points: 10.0
+    selected_default_spread_pips: 1.0
+    selected_max_spread_points: 18.0
+    selected_max_spread_pips: 1.8

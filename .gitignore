@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Environment/secrets
+.env
+*.env
+secrets.*
+credentials.*
+*.key
+*.pem
+
+# Local MT5 / training / generated data
+# Keep generated datasets out of Git; use scripts to regenerate them.
+data/
+!data/.gitkeep
+!data/**/.gitkeep
+*.parquet
+*.npz
+*.csv
+
+# Model checkpoints / trained binaries
+models/epoch_checkpoints/
+models/**/*.pt
+models/**/*.pkl
+models/**/*.pth
+models/**/*.ckpt
+models/**/*.onnx
+*.pkl
+*.json
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Optional generated model-side artifacts; uncomment if you do not want scalers/features in Git
+models/**/*.pkl
+models/**/*_features.json
+
+# Backtest / grid search / live outputs
+results/
+outputs/
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

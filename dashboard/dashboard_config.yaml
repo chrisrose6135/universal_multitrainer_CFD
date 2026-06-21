@@ -1,0 +1,81 @@
+server:
+  # Use 127.0.0.1 if putting Caddy/Nginx in front.
+  # Use 0.0.0.0 only if you understand the firewall/port-forwarding implications.
+  host: 0.0.0.0
+  port: 8050
+  refresh_seconds: 10
+  cache_ttl_seconds: 2
+
+security:
+  # Recommended: set these as environment variables, not in this file.
+  username_env: DASHBOARD_USER
+  password_env: DASHBOARD_PASSWORD
+  allow_config_credentials: false
+  username: ""
+  password: ""
+
+paths:
+  # Set this to your trading project root. If dashboard/ is placed in the project root,
+  # '..' is normally right.
+  project_root: ".."
+
+  # The dashboard auto-discovers likely live/paper logs and excludes replay logs.
+  signal_logs:
+    - "logs/live_direction_ensemble_signals*.csv"
+    - "For Live Trading/logs/live_direction_ensemble_signals*.csv"
+    - "logs/live_direction_signals*.csv"
+    - "logs/live_signals*.csv"
+    - "logs/*signal*.csv"
+    - "logs/*signals*.csv"
+
+  trade_logs:
+    - "logs/live_direction_trades*.csv"
+    - "For Live Trading/logs/live_direction_trades*.csv"
+    - "logs/live_trades*.csv"
+    - "logs/paper_trades*.csv"
+    - "logs/*trade*.csv"
+
+  paper_state_files:
+    - "logs/live_direction_open_trades.json"
+    - "For Live Trading/logs/live_direction_open_trades.json"
+    - "logs/paper_trading_state.json"
+    - "logs/paper_state.json"
+    - "logs/paper_trades.json"
+
+  summary_files:
+    - "logs/live_direction_summary.json"
+    - "For Live Trading/logs/live_direction_summary.json"
+    - "logs/live_summary.json"
+    - "logs/saved_model_replay_report.json"
+    - "logs/saved_model_replay_all_epochs_summary.json"
+
+  model_selection_files:
+    - "live_model_selection_table.csv"
+    - "For Live Trading/live_model_selection_table.csv"
+
+  manifest_files:
+    - "live_ensemble_manifest.json"
+    - "For Live Trading/live_ensemble_manifest.json"
+    - "live_ensemble_manifest.yaml"
+    - "For Live Trading/live_ensemble_manifest.yaml"
+
+  bar_state_files:
+    - "state/live_direction_ensemble_bar_state.json"
+    - "For Live Trading/state/live_direction_ensemble_bar_state.json"
+
+  exclude_patterns:
+    - "*saved_model_replay*decisions.csv"
+    - "*saved_model_replay*trades.csv"
+    - "*training_replay*decisions.csv"
+    - "*training_replay*trades.csv"
+    - "*direction_replay*decisions.csv"
+    - "*direction_replay*trades.csv"
+    - "*replay*decisions.csv"
+    - "*replay*trades.csv"
+    - "*threshold_sweep*"
+
+display:
+  default_limit: 100
+  max_rows: 5000
+  symbol: NAS100
+  timezone_label: "UTC / broker-corrected"

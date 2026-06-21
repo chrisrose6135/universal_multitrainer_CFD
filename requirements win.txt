@@ -1,0 +1,7 @@
+MetaTrader5>=5.0.45
+numpy>=1.23
+pandas>=1.5
+PyYAML>=6.0
+scikit-learn>=1.2
+joblib>=1.2
+torch>=2.0
